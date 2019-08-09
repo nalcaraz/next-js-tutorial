@@ -1,5 +1,6 @@
 import Layout from '../comps/layout';
 import Link from 'next/link';
+import Home from '../comps/home';
 
 
 function getPosts() {
@@ -38,6 +39,7 @@ function getPosts() {
     return (
       <Layout>
         <h1>My Blog</h1>
+        <Home></Home>
         <ul>
           {getPosts().map(post => (
             <PostLink key={post.id} post={post} />
